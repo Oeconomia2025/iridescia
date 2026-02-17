@@ -70,7 +70,7 @@ export function WalletConnect({ collapsed = false }: WalletConnectProps) {
         }}
         className={`w-full flex items-center ${
           collapsed ? "justify-center px-2" : "space-x-3 px-3"
-        } py-2 rounded-lg text-left transition-colors group relative text-navy-900 font-semibold shadow-lg hover:brightness-110 overflow-hidden`}
+        } py-2 rounded-lg text-left transition-colors group relative text-navy-900 font-medium shadow-lg hover:brightness-110 overflow-hidden`}
         style={{
           backgroundImage: "url(/iridescia-live.jpg)",
           backgroundSize: "cover",
@@ -80,7 +80,7 @@ export function WalletConnect({ collapsed = false }: WalletConnectProps) {
       >
         <Wallet className="w-5 h-5 flex-shrink-0" />
         {!collapsed && (
-          <span className="whitespace-nowrap">{formatAddress(address)}</span>
+          <span className="text-sm whitespace-nowrap">{formatAddress(address)}</span>
         )}
         {collapsed && (
           <div className="absolute left-full ml-2 px-2 py-1 bg-navy-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50 border border-navy-600">
@@ -98,7 +98,7 @@ export function WalletConnect({ collapsed = false }: WalletConnectProps) {
         onClick={() => setIsOpen(true)}
         className={`w-full flex items-center ${
           collapsed ? "justify-center px-2" : "space-x-3 px-3"
-        } py-2 rounded-lg text-left transition-colors group relative text-navy-900 font-semibold shadow-lg hover:brightness-110 overflow-hidden`}
+        } py-2 rounded-lg text-left transition-colors group relative text-navy-900 font-medium shadow-lg hover:brightness-110 overflow-hidden`}
         style={{
           backgroundImage: "url(/iridescia-live.jpg)",
           backgroundSize: "cover",
@@ -108,7 +108,7 @@ export function WalletConnect({ collapsed = false }: WalletConnectProps) {
       >
         <Wallet className="w-5 h-5 flex-shrink-0" />
         {!collapsed && (
-          <span className="whitespace-nowrap">Connect Wallet</span>
+          <span className="text-sm whitespace-nowrap">Connect Wallet</span>
         )}
         {collapsed && (
           <div className="absolute left-full ml-2 px-2 py-1 bg-navy-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50 border border-navy-600">

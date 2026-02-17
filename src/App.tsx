@@ -166,7 +166,7 @@ export default function App() {
                       sidebarCollapsed ? "justify-center px-2" : "space-x-3 px-3"
                     } py-2 rounded-lg text-left transition-colors group relative overflow-hidden ${
                       active
-                        ? "text-navy-900 font-semibold shadow-lg"
+                        ? "text-navy-900 font-medium shadow-lg"
                         : "text-text-secondary hover:text-text-primary hover:bg-navy-800"
                     }`}
                     style={
@@ -221,8 +221,8 @@ export default function App() {
                 sidebarCollapsed ? "justify-center px-2" : "space-x-3 px-3"
               } py-2 rounded-lg text-left transition-colors group relative ${
                 socialOpen
-                  ? "text-navy-900 font-semibold shadow-lg"
-                  : "bg-navy-700/50 text-text-secondary hover:text-text-primary hover:bg-navy-700"
+                  ? "text-navy-900 font-medium shadow-lg"
+                  : "text-text-secondary hover:text-text-primary hover:bg-navy-800"
               }`}
               style={
                 socialOpen
@@ -236,7 +236,7 @@ export default function App() {
               title={sidebarCollapsed ? "Links" : undefined}
             >
               <Globe className="w-5 h-5 flex-shrink-0" />
-              {!sidebarCollapsed && <span className="text-sm">Links</span>}
+              {!sidebarCollapsed && <span className="text-sm whitespace-nowrap">Links</span>}
               {sidebarCollapsed && (
                 <div className="absolute left-full ml-2 px-2 py-1 bg-navy-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50 border border-navy-600">
                   Links
@@ -290,7 +290,7 @@ export default function App() {
               className="w-5 h-5 flex-shrink-0 object-contain"
             />
             {!sidebarCollapsed && (
-              <span className="text-sm font-semibold text-navy-900 drop-shadow-sm">OECsplorer</span>
+              <span className="text-sm text-navy-900 drop-shadow-sm">OECsplorer</span>
             )}
             {sidebarCollapsed && (
               <div className="absolute left-full ml-2 px-2 py-1 bg-navy-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50 border border-navy-600">
