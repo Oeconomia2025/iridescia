@@ -122,7 +122,7 @@ export default function App() {
           sidebarCollapsed ? "w-16" : "w-48"
         } bg-navy-900 border-r border-navy-600 transform ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-all duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0 flex flex-col shadow-xl shadow-black/70`}
+        } transition-all duration-300 ease-in-out lg:translate-x-0 flex flex-col shadow-xl shadow-black/70`}
       >
         {/* Header */}
         <div className="sticky top-0 z-10 bg-navy-900 flex items-center justify-between h-20 px-4">
@@ -318,7 +318,7 @@ export default function App() {
       </aside>
 
       {/* Main content */}
-      <main className="flex-1 overflow-auto mr-9">
+      <main className={`flex-1 overflow-auto mr-9 ${sidebarCollapsed ? "lg:ml-16" : "lg:ml-48"} transition-all duration-300`}>
         <div className="max-w-6xl mx-auto px-6 py-8">
           <Routes>
             <Route path="/" element={<Dashboard />} />
