@@ -90,7 +90,7 @@ export default function MyContracts() {
         {/* Header */}
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <FolderOpen className="w-7 h-7 text-irid-blue" />
+            <FolderOpen className="w-7 h-7" stroke="url(#irid-img-fill)" />
             <h1 className="text-3xl font-bold irid-gradient-text">
               My Contracts
             </h1>
@@ -126,7 +126,7 @@ export default function MyContracts() {
       {/* Header */}
       <div>
         <div className="flex items-center gap-3 mb-2">
-          <FolderOpen className="w-7 h-7 text-irid-blue" />
+          <FolderOpen className="w-7 h-7" stroke="url(#irid-img-fill)" />
           <h1 className="text-3xl font-bold irid-gradient-text">
             My Contracts
           </h1>

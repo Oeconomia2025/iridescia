@@ -90,10 +90,7 @@ export default function Deploy() {
     <div className="space-y-8">
       {/* Page Header */}
       <div>
-        <div className="flex items-center gap-3 mb-2">
-          <Rocket className="w-7 h-7 text-irid-blue" />
-          <h1 className="text-3xl font-bold irid-gradient-text">Deploy Contract</h1>
-        </div>
+        <h1 className="text-3xl font-bold irid-gradient-text">Deploy Contract</h1>
         <p className="text-text-secondary text-sm">
           Deploy smart contracts to Sepolia testnet
         </p>

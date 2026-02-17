@@ -104,7 +104,7 @@ export default function AbiTools() {
       {/* Header */}
       <div>
         <div className="flex items-center gap-3 mb-2">
-          <Braces className="w-7 h-7 text-irid-purple" />
+          <Braces className="w-7 h-7" stroke="url(#irid-img-fill)" />
           <h1 className="text-3xl font-bold irid-gradient-text">ABI Tools</h1>
         </div>
         <p className="text-text-secondary text-sm">

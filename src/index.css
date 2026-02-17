@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  /* Dark navy palette */
-  --color-navy-950: #060a14;
-  --color-navy-900: #0a0e1a;
-  --color-navy-800: #0f1629;
-  --color-navy-700: #151e38;
-  --color-navy-600: #1c2a4a;
-  --color-navy-500: #2a3d66;
-  --color-navy-400: #3d5a8a;
-  --color-navy-300: #5a7db5;
-  --color-navy-200: #8aa5d4;
-  --color-navy-100: #bcc9e5;
+  /* Dark navy palette (blue-shifted) */
+  --color-navy-950: #060b18;
+  --color-navy-900: #0a1020;
+  --color-navy-800: #0e1830;
+  --color-navy-700: #142240;
+  --color-navy-600: #1a2f54;
+  --color-navy-500: #274470;
+  --color-navy-400: #3a6194;
+  --color-navy-300: #5882bb;
+  --color-navy-200: #86aad8;
+  --color-navy-100: #b8cde8;
 
   /* Iridescent accent colors */
   --color-irid-pink: #f472b6;
@@ -22,10 +22,10 @@
   --color-irid-gold: #c4956a;
 
   /* Semantic */
-  --color-surface: #0f1629;
-  --color-surface-elevated: #151e38;
-  --color-border-primary: #1c2a4a;
-  --color-border-secondary: #151e38;
+  --color-surface: #0e1830;
+  --color-surface-elevated: #142240;
+  --color-border-primary: #1a2f54;
+  --color-border-secondary: #142240;
   --color-text-primary: #e2e8f0;
   --color-text-secondary: #94a3b8;
   --color-text-muted: #64748b;
@@ -33,7 +33,7 @@
 
 body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  background-color: #060a14;
+  background-color: #060b18;
   color: #e2e8f0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -59,14 +59,14 @@ button, a, [role="button"], label[for], select, summary, [tabindex]:not([tabinde
 }
 
 .irid-gradient-text {
-  background: linear-gradient(135deg, #f472b6, #a78bfa, #60a5fa, #22d3ee, #34d399);
+  background: url(/iridescia-live.jpg) center / cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .irid-border {
-  background: linear-gradient(#0f1629, #0f1629) padding-box,
+  background: linear-gradient(#0e1830, #0e1830) padding-box,
               linear-gradient(135deg, #f472b6, #a78bfa, #60a5fa, #22d3ee, #34d399) border-box;
   border: 1px solid transparent;
 }

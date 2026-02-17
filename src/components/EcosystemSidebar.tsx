@@ -193,8 +193,8 @@ export function EcosystemSidebar() {
         <div
           className="rounded-xl p-6 border shadow-2xl shadow-black/50"
           style={{
-            backgroundColor: "rgba(10, 14, 26, 0.85)",
-            borderColor: "#1c2a4a",
+            backgroundColor: "rgba(10, 16, 32, 0.85)",
+            borderColor: "#1a2f54",
             height: "250px",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
@@ -239,8 +239,8 @@ export function EcosystemSidebar() {
         <div
           className="rounded-xl p-6 border shadow-2xl shadow-black/50"
           style={{
-            backgroundColor: "rgba(10, 14, 26, 0.85)",
-            borderColor: "#1c2a4a",
+            backgroundColor: "rgba(10, 16, 32, 0.85)",
+            borderColor: "#1a2f54",
             height: "250px",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
@@ -282,7 +282,7 @@ export function EcosystemSidebar() {
               : undefined,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            backgroundColor: expanded ? undefined : "#0a0e1a",
+            backgroundColor: expanded ? undefined : "#0a1020",
           }}
           onClick={toggleExpanded}
         >

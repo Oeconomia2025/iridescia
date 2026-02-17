@@ -71,7 +71,7 @@ export default function GasStation() {
       {/* Header */}
       <div>
         <div className="flex items-center gap-3 mb-2">
-          <Fuel className="w-7 h-7 text-irid-green" />
+          <Fuel className="w-7 h-7" stroke="url(#irid-img-fill)" />
           <h1 className="text-3xl font-bold irid-gradient-text">Gas Station</h1>
         </div>
         <p className="text-text-secondary text-sm">

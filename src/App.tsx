@@ -76,6 +76,15 @@ export default function App() {
 
   return (
     <div className="flex min-h-screen bg-navy-950">
+      {/* SVG pattern for iridescent icon fills */}
+      <svg width="0" height="0" style={{ position: "absolute" }}>
+        <defs>
+          <pattern id="irid-img-fill" patternUnits="userSpaceOnUse" width="24" height="24">
+            <image href="/iridescia-live.jpg" x="0" y="0" width="24" height="24" preserveAspectRatio="xMidYMid slice" />
+          </pattern>
+        </defs>
+      </svg>
+
       {/* Mobile overlay */}
       {sidebarOpen && (
         <div
@@ -244,7 +253,7 @@ export default function App() {
             } py-2 rounded-lg text-left transition-colors group relative text-white hover:brightness-110`}
             style={{
               background:
-                "linear-gradient(#0a0e1a, #0a0e1a) padding-box, url(/iridescia-live.jpg) border-box",
+                "linear-gradient(#0a1020, #0a1020) padding-box, url(/iridescia-live.jpg) border-box",
               backgroundSize: "cover",
               backgroundPosition: "center",
               border: "2px solid transparent",
