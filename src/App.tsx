@@ -312,7 +312,7 @@ export default function App() {
               className="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0"
               style={{ boxShadow: "0 0 6px #22C55E44" }}
             />
-            {!sidebarCollapsed && <span>Sepolia Testnet</span>}
+            {!sidebarCollapsed && <span className="whitespace-nowrap">Sepolia Testnet</span>}
           </div>
         </div>
       </aside>

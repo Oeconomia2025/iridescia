@@ -69,7 +69,7 @@ export default function Dashboard() {
         </p>
         <p className="text-text-muted leading-relaxed max-w-2xl">
           Smart contract deployment, audited templates, automated security scanning, and
-          developer tooling — everything you need to build on the Oeconomia blockchain
+          developer tooling. Everything you need to build in the Oeconomia
           ecosystem. Ship faster, ship safer.
         </p>
       </section>

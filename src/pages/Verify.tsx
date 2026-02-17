@@ -353,7 +353,7 @@ export default function Verify() {
           <div className="flex items-center gap-3 text-red-400">
             <AlertCircle className="w-5 h-5" />
             <span className="text-sm font-medium">
-              Verification failed. Bytecode mismatch — check compiler settings
+              Verification failed. Bytecode mismatch, check compiler settings
               and source code.
             </span>
           </div>
