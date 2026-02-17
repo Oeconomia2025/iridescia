@@ -181,7 +181,7 @@ export default function App() {
                     title={sidebarCollapsed ? item.label : undefined}
                   >
                     <item.icon className="w-5 h-5 flex-shrink-0" />
-                    {!sidebarCollapsed && <span>{item.label}</span>}
+                    {!sidebarCollapsed && <span className="whitespace-nowrap">{item.label}</span>}
                     {sidebarCollapsed && (
                       <div className="absolute left-full ml-2 px-2 py-1 bg-navy-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50 border border-navy-600">
                         {item.label}

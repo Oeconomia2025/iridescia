@@ -271,10 +271,10 @@ export function EcosystemSidebar() {
       >
         {/* Bar - always visible */}
         <div
-          className={`w-9 h-full shrink-0 cursor-pointer relative border-l transition-colors duration-300 ${
+          className={`w-9 h-full shrink-0 cursor-pointer relative border-l transition-all duration-300 ${
             expanded
               ? "border-irid-purple/50"
-              : "border-irid-purple/20 hover:border-irid-purple/40"
+              : "bg-navy-900 border-irid-purple/20 hover:border-irid-purple/40 hover:bg-navy-700/80 hover:w-11"
           }`}
           style={{
             backgroundImage: expanded
@@ -282,7 +282,6 @@ export function EcosystemSidebar() {
               : undefined,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            backgroundColor: expanded ? undefined : "#0a1020",
           }}
           onClick={toggleExpanded}
         >
