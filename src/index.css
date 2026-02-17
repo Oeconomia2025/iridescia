@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark navy palette */
+  --color-navy-950: #060a14;
+  --color-navy-900: #0a0e1a;
+  --color-navy-800: #0f1629;
+  --color-navy-700: #151e38;
+  --color-navy-600: #1c2a4a;
+  --color-navy-500: #2a3d66;
+  --color-navy-400: #3d5a8a;
+  --color-navy-300: #5a7db5;
+  --color-navy-200: #8aa5d4;
+  --color-navy-100: #bcc9e5;
+
+  /* Iridescent accent colors */
+  --color-irid-pink: #f472b6;
+  --color-irid-purple: #a78bfa;
+  --color-irid-blue: #60a5fa;
+  --color-irid-cyan: #22d3ee;
+  --color-irid-green: #34d399;
+  --color-irid-gold: #c4956a;
+
+  /* Semantic */
+  --color-surface: #0f1629;
+  --color-surface-elevated: #151e38;
+  --color-border-primary: #1c2a4a;
+  --color-border-secondary: #151e38;
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: #060a14;
+  color: #e2e8f0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, .font-mono {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* Pointer cursor on interactive elements (Tailwind Preflight resets to default) */
+button, a, [role="button"], label[for], select, summary, [tabindex]:not([tabindex="-1"]) {
+  cursor: pointer;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar { display: none; }
+* { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Iridescent gradient utility */
+.irid-gradient {
+  background: linear-gradient(135deg, #f472b6, #a78bfa, #60a5fa, #22d3ee, #34d399);
+}
+
+.irid-gradient-text {
+  background: linear-gradient(135deg, #f472b6, #a78bfa, #60a5fa, #22d3ee, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.irid-border {
+  background: linear-gradient(#0f1629, #0f1629) padding-box,
+              linear-gradient(135deg, #f472b6, #a78bfa, #60a5fa, #22d3ee, #34d399) border-box;
+  border: 1px solid transparent;
+}
+
+/* Glow effects */
+.glow-pink { box-shadow: 0 0 20px rgba(244, 114, 182, 0.15); }
+.glow-blue { box-shadow: 0 0 20px rgba(96, 165, 250, 0.15); }
+.glow-cyan { box-shadow: 0 0 20px rgba(34, 211, 238, 0.15); }
