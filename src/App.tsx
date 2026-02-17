@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import {
   LayoutDashboard,
@@ -67,10 +67,22 @@ export default function App() {
     return false;
   });
   const [socialOpen, setSocialOpen] = useState(false);
+  const socialRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     localStorage.setItem("irid-sidebar-collapsed", sidebarCollapsed.toString());
   }, [sidebarCollapsed]);
+
+  useEffect(() => {
+    if (!socialOpen) return;
+    const handleClick = (e: MouseEvent) => {
+      if (socialRef.current && !socialRef.current.contains(e.target as Node)) {
+        setSocialOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [socialOpen]);
 
   const toggleCollapsed = () => setSidebarCollapsed((prev) => !prev);
 
@@ -197,7 +209,7 @@ export default function App() {
         {/* Bottom section */}
         <div className="sticky bottom-0 bg-navy-900 p-2 flex flex-col space-y-2 border-t border-navy-700">
           {/* Links dropdown (opens upward) */}
-          <div className="relative">
+          <div className="relative" ref={socialRef}>
             {socialOpen && (
               <div className="absolute bottom-full mb-1 left-0 right-0 bg-navy-800 border border-navy-600 rounded-lg overflow-hidden shadow-lg">
                 {LINKS.map((link) => (
@@ -206,7 +218,10 @@ export default function App() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-text-primary hover:bg-navy-700 transition-colors"
+                    className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-navy-900 hover:font-medium transition-colors"
+                    style={{ backgroundSize: "cover", backgroundPosition: "center" }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundImage = "url(/iridescia-live.jpg)"}
+                    onMouseLeave={(e) => { e.currentTarget.style.backgroundImage = ""; }}
                     onClick={() => setSocialOpen(false)}
                   >
                     <link.icon className="w-3.5 h-3.5" />
@@ -222,7 +237,7 @@ export default function App() {
               } py-2 rounded-lg text-left transition-colors group relative ${
                 socialOpen
                   ? "text-navy-900 font-medium shadow-lg"
-                  : "text-text-secondary hover:text-text-primary hover:bg-navy-800"
+                  : "bg-navy-700 text-text-secondary hover:text-text-primary hover:bg-navy-600"
               }`}
               style={
                 socialOpen
