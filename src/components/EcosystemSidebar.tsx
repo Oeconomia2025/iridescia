@@ -274,7 +274,7 @@ export function EcosystemSidebar() {
           className={`w-9 h-full shrink-0 cursor-pointer relative border-l transition-all duration-300 ${
             expanded
               ? "border-irid-purple/50"
-              : "bg-navy-900 border-irid-purple/20 hover:border-irid-purple/40 hover:bg-navy-700/80 hover:w-11"
+              : "bg-navy-900 border-irid-purple/20 hover:border-irid-purple/40 hover:bg-navy-700/80"
           }`}
           style={{
             backgroundImage: expanded
