@@ -81,7 +81,7 @@ export const config = createConfig({
     }),
   ],
   transports: {
-    [sepolia.id]: http(),
+    [sepolia.id]: http("https://eth-sepolia.g.alchemy.com/v2/esuQ5PPGg8-Sr5-X-P-JT"),
   },
 })
 
