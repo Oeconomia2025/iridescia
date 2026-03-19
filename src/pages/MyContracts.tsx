@@ -26,7 +26,7 @@ const MOCK_CONTRACTS: Contract[] = [
   {
     id: "1",
     name: "OEC Token",
-    address: "0x2b2fb8df4ac5d394f0d5674d7a54802e42a06aba",
+    address: "0x00904218319a045a96d776ec6a970f54741208e6",
     network: "Sepolia",
     status: "active",
     deployedDate: "2025-12-15",

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, Suspense, lazy } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import {
   LayoutDashboard,
@@ -26,14 +26,14 @@ import {
 
 import { EcosystemSidebar } from "@/components/EcosystemSidebar";
 import { WalletConnect } from "@/components/wallet-connect";
-import Dashboard from "@/pages/Dashboard";
-import Deploy from "@/pages/Deploy";
-import Templates from "@/pages/Templates";
-import Security from "@/pages/Security";
-import AbiTools from "@/pages/AbiTools";
-import GasStation from "@/pages/GasStation";
-import Verify from "@/pages/Verify";
-import MyContracts from "@/pages/MyContracts";
+const Dashboard = lazy(() => import("@/pages/Dashboard"));
+const Deploy = lazy(() => import("@/pages/Deploy"));
+const Templates = lazy(() => import("@/pages/Templates"));
+const Security = lazy(() => import("@/pages/Security"));
+const AbiTools = lazy(() => import("@/pages/AbiTools"));
+const GasStation = lazy(() => import("@/pages/GasStation"));
+const Verify = lazy(() => import("@/pages/Verify"));
+const MyContracts = lazy(() => import("@/pages/MyContracts"));
 
 const NAV_ITEMS = [
   { path: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -335,6 +335,7 @@ export default function App() {
       {/* Main content */}
       <main className={`flex-1 overflow-auto mr-9 ${sidebarCollapsed ? "lg:ml-16" : "lg:ml-48"} transition-all duration-300`}>
         <div className="max-w-6xl mx-auto px-6 py-8">
+          <Suspense fallback={<div className="flex items-center justify-center h-64 text-text-secondary">Loading...</div>}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/deploy" element={<Deploy />} />
@@ -345,6 +346,7 @@ export default function App() {
             <Route path="/gas-station" element={<GasStation />} />
             <Route path="/verify" element={<Verify />} />
           </Routes>
+          </Suspense>
         </div>
       </main>
 
