@@ -49,6 +49,12 @@ const ecosystemItems = [
     description: "Developer infrastructure for the Oeconomia ecosystem. Deploy contracts from templates, run security scans, verify source code, and manage your deployments.",
   },
   {
+    name: "Praedisia",
+    image: "https://praedisia.oeconomia.io/praedisia-logo.svg",
+    url: "https://praedisia.oeconomia.io/",
+    description: "Binary prediction markets on real-world outcomes. Trade YES/NO positions with transparent CPMM pricing, resolved by the Oeconomia DAO.",
+  },
+  {
     name: "Governance",
     image: "/ecosystem/governance.png",
     url: "https://governance.oeconomia.io/",
